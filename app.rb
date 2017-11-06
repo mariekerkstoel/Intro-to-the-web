@@ -9,5 +9,6 @@ get '/info' do
 end
 
 get '/cat' do
+  @foo = ["Amigo", "Oscar", "Viking", "Bobby", "Timmy", "Marie"].sample
   erb(:index)
 end
