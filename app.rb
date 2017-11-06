@@ -10,12 +10,13 @@ end
 
 get '/random-cat' do
   @foo = ["Amigo", "Oscar", "Viking", "Bobby", "Timmy", "Marie"].sample
-  erb(:index)
+  erb(:named_cat)
 end
 
 get '/named-cat' do
   p params
   @foo = params[:name]
   @age = params[:age]
-  erb(:index)
+  @colour = params[:colour]
+  erb(:named_cat)
 end
