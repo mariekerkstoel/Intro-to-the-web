@@ -4,6 +4,10 @@ get '/' do
   '<h1>HELLO!!!!</h1>'
 end
 
+get '/secret' do
+  'not so secret'
+end
+
 get '/info' do
-  'Allan and Marie'
+  'ALLAN AND MARIE!'
 end
