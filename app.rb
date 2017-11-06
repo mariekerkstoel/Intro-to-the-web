@@ -8,7 +8,14 @@ get '/info' do
   erb(:info)
 end
 
-get '/cat' do
+get '/random-cat' do
   @foo = ["Amigo", "Oscar", "Viking", "Bobby", "Timmy", "Marie"].sample
+  erb(:index)
+end
+
+get '/named-cat' do
+  p params
+  @foo = params[:name]
+  @age = params[:age]
   erb(:index)
 end
